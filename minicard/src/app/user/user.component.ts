@@ -56,17 +56,6 @@ afficher() {
 
 // pour ajout parfum
 addNewParfum() {
-  this.userService.createParfum(this.newParfum).subscribe(
-    (response) => {
-      console.log('Article ajouté avec succès :', response);
-      // Réinitialiser les données pour ajouter un nouvel article
-      this.newParfum = response;
-      this.affichermessage('success','Article Ajouté','')
-    },
-    (error) => {
-      console.error('Erreur lors de l\'ajout de l\'article :', error);
-    }
-  );
 }
 
 RecuperationId(id: any) {
