@@ -1,0 +1,26 @@
+/* .card-body
+{
+  background-color: black;
+} */
+.bouttonajoutclasses  {
+  background-color: #3181be;
+  border: none;
+  padding: 15px 23px;
+  font-size: 20px;
+  border-radius: 15px 0px 15px 0px;
+  font-weight: bold;
+  }
+  .bouttonajoutclasses:hover {
+  background-color: #3181be;
+  border: none;
+  padding: 15px 23px;
+  font-size: 20px;
+  border-radius: 15px 0px 15px 0px;
+  }
+  .searchclasse{
+    background-color: #3181be;
+    color: white;
+    }
+  .searchclasse i{
+    font-size: 20px;
+    }

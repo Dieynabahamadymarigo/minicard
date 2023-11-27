@@ -1,0 +1,60 @@
+<!-- <p>user works!</p> -->
+
+<div class="d-flex justify-content-between m-5 mt-5">
+<div class="col-md-6">
+  <button type="button" class="btn btn-primary bouttonajoutclasses " data-bs-toggle="modal" data-bs-target="#ajoutParfum">Ajouter </button>
+  <!-- <button type="button" class="btn active btn-corbeille notactive ms-3">Voir corbeille </button> -->
+</div>
+
+<div class="input-group">
+  <input type="text" name="search" class="form-control">
+  <button class="searchclasse input-group-text"><i class="bi bi-search"></i></button>
+</div>
+</div>
+
+
+
+<div class="container d-flex">
+  <div class="card m-5 " style="width: 20rem;" *ngFor="let user of tabUsers">
+    <img src="https://img.freepik.com/photos-gratuite/femme-portant-lunettes-se-tient-dans-bureau-occupe-arriere-plan-flou_188544-33150.jpg?size=626&ext=jpg&ga=GA1.1.1050941064.1697535370&semt=sph" class="card-img-top" alt="...">
+    <div class="card-body" >
+      <h5 class="card-title">Parfum</h5>
+      <p class="card-text">nom : {{user.nom}} </p>
+      <p class="card-text">qualite : {{user.qualite}} </p>
+      <p class="card-text">cout : {{user.cout}} </p>
+      <p class="card-text">description : {{user.description}} </p>
+      <a href="#" class=" btn btn-primary">Modifier</a>
+      <a href="#" class="m-2 btn btn-danger">Supprimer</a>
+      <a href="#" class=" btn btn-success">Detail</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal pour ajout parfum -->
+
+  <div class="modal" tabindex="-1" id="ajoutParfum">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ajout Parfum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <label>Nom :</label><br>
+            <input type="text" name="nom" id="titre" [(ngModel)]="newParfum.nom" required><br>
+            <label>Qualite :</label><br>
+            <input type="text" name="qualite" id="contenu" [(ngModel)]="newParfum.qualite"  required> <br>
+            <label>Cout :</label><br>
+            <input type="text" name="cout" id="contenu" [(ngModel)]="newParfum.cout"  required> <br>
+            <label>Description :</label><br>
+            <input type="text" name="description" id="contenu" [(ngModel)]="newParfum.description"  required> <br>
+            <button type="submit" class="btn btn-primary" style="margin-top: 10px;" (click)="addNewParfum()">Ajouter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
